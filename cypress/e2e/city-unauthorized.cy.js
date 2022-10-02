@@ -5,7 +5,7 @@ describe('City- cidade de origem', () => {
     it('Deve fazer um GET com a cidade de origem nao autorizado', () => {
         cy.request({
             method: 'GET',
-            url: 'https://api.openweathermap.org/data/2.5/weather?q=rio de janeiro&appid=89db80af318dc0be3caec69b88d504b00' ,
+            url: 'https://api.openweathermap.org/data/2.5/weather?q=rio de janeiro&appid=89db80af318dc0be3caec69b88d504b00a' ,
             failOnStatusCode: false,
             body: {
                 "coord": {

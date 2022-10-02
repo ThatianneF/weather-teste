@@ -1,11 +1,11 @@
 /// <reference types="cypress" />
 
-describe('City- cidade de origem', () => {
+describe('Favorite city', () => {
 
-    it('Deve fazer um GET com a cidade de origem com sucesso', () => {
+    it('Deve fazer um GET com a cidade favorita com sucesso', () => {
         cy.request({
             method: 'GET',
-            url: 'https://api.openweathermap.org/data/2.5/weather?q=rio de janeiro&appid=89db80af318dc0be3caec69b88d504b0' ,
+            url: 'https://api.openweathermap.org/data/2.5/weather?lat=51.5072&lon=0.1276&appid=89db80af318dc0be3caec69b88d504b0&q=London' ,
             body: {
                 "coord": {
                     "lon": -43.2075,
@@ -32,7 +32,7 @@ describe('City- cidade de origem', () => {
                 "cod": 200
             }
         }).then((response) => {
-            expect(response.status).to.equal(200)
+          expect(response.status).to.equal(200)
         })
         
     });
